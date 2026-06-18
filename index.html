@@ -22,18 +22,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 }
 .tester-nav span { color: #888; font-size: 12px; flex-shrink: 0; }
 .flow-btns { display: flex; gap: 6px; flex: 1; flex-wrap: wrap; }
-.flow-btn {
-  padding: 6px 12px;
-  border-radius: 20px;
-  border: 1px solid #333;
-  background: none;
-  color: #888;
-  font-size: 12px;
-  cursor: pointer;
-}
+.flow-btn { padding: 6px 12px; border-radius: 20px; border: 1px solid #333; background: none; color: #888; font-size: 12px; cursor: pointer; }
 .flow-btn.active { background: #3DC23D; color: #111; border-color: #3DC23D; font-weight: 600; }
 
-/* PHONE SHELL */
 .phone {
   width: 390px;
   height: 844px;
@@ -60,88 +51,27 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; b
 
 .phone-body { flex: 1; overflow: hidden; position: relative; }
 
-/* SCREENS — flex column, full height, button always at bottom */
-.screen {
-  display: none;
-  flex-direction: column;
-  height: 100%;
-  padding: 20px 22px 18px;
-}
+.screen { display: none; flex-direction: column; height: 100%; padding: 20px 22px 18px; }
 .screen.active { display: flex; }
+.screen-top { flex: 1; overflow-y: auto; min-height: 0; padding-right: 2px; }
+.screen-bottom { flex-shrink: 0; padding-top: 12px; display: flex; flex-direction: column; gap: 9px; }
 
-.screen-top {
-  flex: 1;
-  overflow-y: auto;
-  min-height: 0;
-  padding-right: 2px;
-}
-.screen-bottom {
-  flex-shrink: 0;
-  padding-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-
-/* ELEMENTS */
-.nav-back {
-  font-size: 13px;
-  color: #888;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: 14px;
-  cursor: pointer;
-  width: fit-content;
-}
+.nav-back { font-size: 13px; color: #888; display: flex; align-items: center; gap: 5px; margin-bottom: 14px; cursor: pointer; width: fit-content; }
 .nav-back:hover { color: #111; }
 
-.badge {
-  display: inline-block;
-  background: #3DC23D22;
-  color: #3DC23D;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 3px 9px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-}
+.badge { display: inline-block; background: #3DC23D22; color: #3DC23D; font-size: 10px; font-weight: 600; padding: 3px 9px; border-radius: 20px; margin-bottom: 10px; }
 .badge.dark { background: #111; color: #fff; }
 
-h2 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 8px;
-  color: #111;
-  letter-spacing: -0.4px;
-}
+h2 { font-size: 24px; font-weight: 700; line-height: 1.2; margin-bottom: 8px; color: #111; letter-spacing: -0.4px; }
 h2 em { color: #3DC23D; font-style: normal; }
+.sub { font-size: 14px; color: #666; line-height: 1.55; margin-bottom: 14px; }
 
-.sub {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.55;
-  margin-bottom: 14px;
-}
-
-/* BUTTONS — always full width */
-.cta-btn {
-  width: 100%;
-  border: none;
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: inherit;
-}
+.cta-btn { width: 100%; border: none; border-radius: 12px; padding: 14px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit; }
 .cta-btn:active { opacity: 0.85; }
 .cta-btn.green { background: #3DC23D; color: #111; }
 .cta-btn.dark { background: #111; color: #fff; }
 .cta-btn.outline { background: transparent; color: #111; border: 1.5px solid #DDD; }
 
-/* CAROUSEL */
 .carousel-dots { display: flex; gap: 5px; justify-content: center; margin-bottom: 14px; }
 .dot { width: 6px; height: 6px; border-radius: 50%; background: #DDD; }
 .dot.active { background: #3DC23D; width: 20px; border-radius: 4px; }
@@ -149,103 +79,61 @@ h2 em { color: #3DC23D; font-style: normal; }
 .carousel-illustration svg { width: 64px; height: 64px; color: #3DC23D; margin: 0 auto 10px; display: block; }
 .carousel-illustration p { font-size: 13px; }
 
-/* CARDS */
 .card-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
-.biz-card {
-  background: #F7F7F7;
-  border: 1px solid #EBEBEB;
-  border-radius: 12px;
-  padding: 12px 14px;
-  cursor: pointer;
-}
+.biz-card { background: #F7F7F7; border: 1px solid #EBEBEB; border-radius: 12px; padding: 12px 14px; cursor: pointer; }
 .biz-card:active { border-color: #3DC23D; }
+.biz-card.hidden { display: none; }
 .biz-card h4 { font-size: 14px; font-weight: 600; color: #111; margin-bottom: 2px; }
 .biz-card p { font-size: 12px; color: #888; }
 .biz-card .tag { display: inline-block; background: #3DC23D18; color: #3DC23D; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; margin-top: 5px; }
 
-/* FILTERS */
 .filter-row { display: flex; gap: 7px; margin-bottom: 12px; flex-wrap: wrap; }
 .filter-pill { font-size: 12px; padding: 4px 11px; border-radius: 20px; border: 1px solid #DDD; color: #888; cursor: pointer; }
 .filter-pill.on { background: #111; color: #fff; border-color: #111; }
 
-/* CHOICES */
 .choice-grid { display: flex; flex-direction: column; gap: 9px; }
-.choice-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
-  border: 1px solid #EBEBEB;
-  border-radius: 12px;
-  cursor: pointer;
-  background: #F7F7F7;
-}
+.choice-item { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border: 1px solid #EBEBEB; border-radius: 12px; cursor: pointer; background: #F7F7F7; }
 .choice-item:active { border-color: #3DC23D; }
-.choice-icon {
-  width: 36px; height: 36px;
-  background: #3DC23D18;
-  border-radius: 9px;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  color: #3DC23D;
-}
+.choice-icon { width: 36px; height: 36px; background: #3DC23D18; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #3DC23D; }
 .choice-icon svg { width: 18px; height: 18px; }
 .choice-item h4 { font-size: 14px; font-weight: 600; color: #111; margin-bottom: 2px; }
 .choice-item p { font-size: 12px; color: #888; }
 
-/* PROFILE */
 .profile-header { background: #111; border-radius: 14px; padding: 16px; margin-bottom: 10px; }
 .profile-header h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 2px; }
 .profile-header .loc { font-size: 12px; color: #888; margin-bottom: 8px; }
 .profile-header .quote { font-size: 12px; color: #ccc; border-left: 2px solid #3DC23D; padding-left: 8px; line-height: 1.5; }
 
-/* INFO BLOCK */
 .info-block { background: #F7F7F7; border-radius: 11px; padding: 12px 14px; margin-bottom: 9px; }
 .info-block strong { font-size: 13px; font-weight: 600; color: #111; display: block; margin-bottom: 3px; }
 .info-block p { font-size: 13px; color: #666; line-height: 1.5; }
 
-/* FORMS */
 .form-group { margin-bottom: 12px; }
 .form-group label { font-size: 12px; font-weight: 600; color: #555; display: block; margin-bottom: 5px; }
-.form-group input {
-  width: 100%;
-  border: 1.5px solid #E0E0E0;
-  border-radius: 10px;
-  padding: 11px 13px;
-  font-size: 14px;
-  color: #111;
-  background: #F7F7F7;
-  outline: none;
-  font-family: inherit;
-}
+.form-group input { width: 100%; border: 1.5px solid #E0E0E0; border-radius: 10px; padding: 11px 13px; font-size: 14px; color: #111; background: #F7F7F7; outline: none; font-family: inherit; }
 .form-group input:focus { border-color: #3DC23D; background: #fff; }
 
-/* EVENTS */
 .event-card { background: #F7F7F7; border: 1px solid #EBEBEB; border-radius: 12px; padding: 12px 14px; margin-bottom: 9px; cursor: pointer; }
 .event-card:active { border-color: #3DC23D; }
 .event-date { font-size: 10px; color: #3DC23D; font-weight: 700; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.4px; }
 .event-card h4 { font-size: 14px; font-weight: 600; color: #111; margin-bottom: 2px; }
 .event-card p { font-size: 12px; color: #888; }
 
-/* EVENT DETAIL */
 .event-detail { background: #111; border-radius: 14px; padding: 16px; margin-bottom: 10px; }
 .event-detail .edate { font-size: 11px; color: #3DC23D; font-weight: 700; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.4px; }
 .event-detail h3 { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 7px; }
 .event-detail p { font-size: 13px; color: #aaa; line-height: 1.55; }
 
-/* SUCCESS */
 .success-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .success-circle { width: 68px; height: 68px; background: #3DC23D22; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
 .success-circle svg { width: 34px; height: 34px; color: #3DC23D; }
 
-/* OVERVIEW */
 .overview-card { background: #F7F7F7; border: 1px solid #EBEBEB; border-radius: 12px; padding: 13px 15px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; }
 .overview-card:active { border-color: #3DC23D; }
 .overview-card h4 { font-size: 14px; font-weight: 600; color: #111; margin-bottom: 2px; }
 .overview-card p { font-size: 12px; color: #888; }
-.overview-card .arr { color: #3DC23D; font-size: 18px; font-weight: 300; }
+.overview-card .arr { color: #3DC23D; font-size: 18px; }
 
-/* WELCOME BLOCK */
 .welcome-block { background: #F7F7F7; border-radius: 12px; padding: 14px; margin-bottom: 14px; }
 .welcome-block p { font-size: 13px; color: #666; line-height: 1.6; }
 .welcome-block strong { color: #111; }
@@ -271,15 +159,12 @@ h2 em { color: #3DC23D; font-style: normal; }
   <div class="phone-body">
 
     <!-- ══════ FLOW 1 ══════ -->
-
     <div class="screen active" id="f1s1">
       <div class="screen-top">
         <div class="badge dark">Welkom</div>
         <h2>Een netwerk van <em>duurzame</em> ondernemers.</h2>
         <p class="sub">Founders for Founders helpt jou groeien, leren en verbinden met ondernemers die hetzelfde pad bewandelen.</p>
-        <div class="welcome-block">
-          <p>Ontdek bedrijven, verhalen en events van <strong>180+ alumni</strong> die impact maken.</p>
-        </div>
+        <div class="welcome-block"><p>Ontdek bedrijven, verhalen en events van <strong>180+ alumni</strong> die impact maken.</p></div>
       </div>
       <div class="screen-bottom">
         <button class="cta-btn green" onclick="goTo('f1s2')">Start ontdekking →</button>
@@ -296,9 +181,7 @@ h2 em { color: #3DC23D; font-style: normal; }
           <p>180+ bedrijven & ondernemers</p>
         </div>
       </div>
-      <div class="screen-bottom">
-        <button class="cta-btn dark" onclick="goTo('f1s3')">Volgende →</button>
-      </div>
+      <div class="screen-bottom"><button class="cta-btn dark" onclick="goTo('f1s3')">Volgende →</button></div>
     </div>
 
     <div class="screen" id="f1s3">
@@ -311,9 +194,7 @@ h2 em { color: #3DC23D; font-style: normal; }
           <p>Ervaringen & kennisdeling</p>
         </div>
       </div>
-      <div class="screen-bottom">
-        <button class="cta-btn dark" onclick="goTo('f1s4')">Volgende →</button>
-      </div>
+      <div class="screen-bottom"><button class="cta-btn dark" onclick="goTo('f1s4')">Volgende →</button></div>
     </div>
 
     <div class="screen" id="f1s4">
@@ -326,9 +207,7 @@ h2 em { color: #3DC23D; font-style: normal; }
           <p>Events, contact & meer</p>
         </div>
       </div>
-      <div class="screen-bottom">
-        <button class="cta-btn green" onclick="goTo('f1s5')">Beginnen →</button>
-      </div>
+      <div class="screen-bottom"><button class="cta-btn green" onclick="goTo('f1s5')">Beginnen →</button></div>
     </div>
 
     <div class="screen" id="f1s5">
@@ -336,18 +215,9 @@ h2 em { color: #3DC23D; font-style: normal; }
         <h2>Hoe wil je <em>verder</em>?</h2>
         <p class="sub">Kies hoe je de omgeving wilt verkennen.</p>
         <div class="choice-grid">
-          <div class="choice-item" onclick="goTo('f1s6')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
-            <div><h4>Eerst rondkijken</h4><p>Bekijk bedrijven zonder account</p></div>
-          </div>
-          <div class="choice-item" onclick="goTo('f1s6')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div>
-            <div><h4>Inloggen</h4><p>Je hebt al een account</p></div>
-          </div>
-          <div class="choice-item" onclick="goTo('f1s6')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
-            <div><h4>Account aanvragen</h4><p>Word lid van het netwerk</p></div>
-          </div>
+          <div class="choice-item" onclick="goTo('f1s6')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div><div><h4>Eerst rondkijken</h4><p>Bekijk bedrijven zonder account</p></div></div>
+          <div class="choice-item" onclick="goTo('f1s6')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div><div><h4>Inloggen</h4><p>Je hebt al een account</p></div></div>
+          <div class="choice-item" onclick="goTo('f1s6')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div><div><h4>Account aanvragen</h4><p>Word lid van het netwerk</p></div></div>
         </div>
       </div>
       <div class="screen-bottom"></div>
@@ -367,10 +237,7 @@ h2 em { color: #3DC23D; font-style: normal; }
       <div class="screen-top">
         <div class="nav-back" onclick="goTo('f1s6')">← Terug</div>
         <div class="filter-row">
-          <span class="filter-pill on">Alle</span>
-          <span class="filter-pill">Energie</span>
-          <span class="filter-pill">Circulair</span>
-          <span class="filter-pill">Food</span>
+          <span class="filter-pill on">Alle</span><span class="filter-pill">Energie</span><span class="filter-pill">Circulair</span><span class="filter-pill">Food</span>
         </div>
         <div class="card-list">
           <div class="biz-card" onclick="goTo('f1s8')"><h4>GreenRoots BV</h4><p>Circulaire verpakkingen voor de foodsector</p><span class="tag">Circulair</span></div>
@@ -384,11 +251,7 @@ h2 em { color: #3DC23D; font-style: normal; }
     <div class="screen" id="f1s8">
       <div class="screen-top">
         <div class="nav-back" onclick="goTo('f1s7')">← Terug</div>
-        <div class="profile-header">
-          <h3>GreenRoots BV</h3>
-          <div class="loc">Circulaire verpakkingen · Amsterdam</div>
-          <div class="quote">"We geloven dat elke verpakking een tweede leven verdient."</div>
-        </div>
+        <div class="profile-header"><h3>GreenRoots BV</h3><div class="loc">Circulaire verpakkingen · Amsterdam</div><div class="quote">"We geloven dat elke verpakking een tweede leven verdient."</div></div>
         <div class="info-block"><strong>Over dit bedrijf</strong><p>GreenRoots ontwikkelt circulaire verpakkingen voor de foodsector. Actief since 2019, 12 medewerkers.</p></div>
         <div class="info-block"><strong>Thema's</strong><p>Circulaire economie · Foodsector · Verpakking</p></div>
       </div>
@@ -398,8 +261,7 @@ h2 em { color: #3DC23D; font-style: normal; }
       </div>
     </div>
 
-    <!-- ══════ FLOW 2 ══════ -->
-
+    <!-- ══════ FLOW 2 — werkende filters ══════ -->
     <div class="screen" id="f2s1">
       <div class="screen-top">
         <h2>Founders <em>For Founders</em></h2>
@@ -408,44 +270,64 @@ h2 em { color: #3DC23D; font-style: normal; }
           <div class="biz-card"><h4>GreenRoots BV</h4><p>Circulaire verpakkingen · Amsterdam</p><span class="tag">Circulair</span></div>
           <div class="biz-card"><h4>Solarfield</h4><p>Energie-opwekking voor MKB</p><span class="tag">Energie</span></div>
         </div>
-        <div class="event-card">
-          <div class="event-date">24 jun · 19:00</div>
-          <h4>Netwerkevent Amsterdam</h4>
-          <p>Komend event voor leden</p>
-        </div>
+        <div class="event-card"><div class="event-date">24 jun · 19:00</div><h4>Netwerkevent Amsterdam</h4><p>Komend event voor leden</p></div>
       </div>
       <div class="screen-bottom">
-        <button class="cta-btn green" onclick="goTo('f2s2')">Bekijk alle bedrijven →</button>
+        <button class="cta-btn green" onclick="goTo('f2s2'); setFilter('alle')">Bekijk alle bedrijven →</button>
       </div>
     </div>
 
     <div class="screen" id="f2s2">
       <div class="screen-top">
         <div class="nav-back" onclick="goTo('f2s1')">← Terug</div>
-        <div class="filter-row">
-          <span class="filter-pill on">Alle</span>
-          <span class="filter-pill">Energie</span>
-          <span class="filter-pill">Circulair</span>
+        <div class="filter-row" id="f2-filters">
+          <span class="filter-pill on" onclick="setFilter('alle')">Alle</span>
+          <span class="filter-pill" onclick="setFilter('energie')">Energie</span>
+          <span class="filter-pill" onclick="setFilter('circulair')">Circulair</span>
+          <span class="filter-pill" onclick="setFilter('food')">Food</span>
         </div>
-        <div class="card-list">
-          <div class="biz-card" onclick="goTo('f2s3')"><h4>GreenRoots BV</h4><p>Circulaire verpakkingen voor de foodsector</p><span class="tag">Circulair</span></div>
-          <div class="biz-card" onclick="goTo('f2s3')"><h4>Solarfield</h4><p>Energie-opwekking voor MKB</p><span class="tag">Energie</span></div>
-          <div class="biz-card" onclick="goTo('f2s3')"><h4>Fairfood</h4><p>Transparantie in de voedselketen</p><span class="tag">Food</span></div>
+        <div class="card-list" id="f2-cards">
+          <div class="biz-card" data-cat="circulair" onclick="goTo('f2s3_circulair')"><h4>GreenRoots BV</h4><p>Circulaire verpakkingen voor de foodsector</p><span class="tag">Circulair</span></div>
+          <div class="biz-card" data-cat="energie" onclick="goTo('f2s3_energie')"><h4>Solarfield</h4><p>Energie-opwekking voor MKB</p><span class="tag">Energie</span></div>
+          <div class="biz-card" data-cat="food" onclick="goTo('f2s3_food')"><h4>Fairfood</h4><p>Transparantie in de voedselketen</p><span class="tag">Food</span></div>
         </div>
       </div>
       <div class="screen-bottom"></div>
     </div>
 
-    <div class="screen" id="f2s3">
+    <div class="screen" id="f2s3_circulair">
       <div class="screen-top">
         <div class="nav-back" onclick="goTo('f2s2')">← Terug</div>
-        <div class="profile-header">
-          <h3>GreenRoots BV</h3>
-          <div class="loc">Circulaire verpakkingen · Amsterdam</div>
-          <div class="quote">"We zoeken partners in de foodsector die willen verduurzamen."</div>
-        </div>
+        <div class="profile-header"><h3>GreenRoots BV</h3><div class="loc">Circulaire verpakkingen · Amsterdam</div><div class="quote">"We zoeken partners in de foodsector die willen verduurzamen."</div></div>
         <div class="info-block"><strong>Wat bieden we</strong><p>Circulaire verpakkingsoplossingen, co-creatie met partners, kennisoverdracht.</p></div>
         <div class="info-block"><strong>Wat zoeken we</strong><p>Foodbedrijven die willen verduurzamen en samen willen optrekken.</p></div>
+        <div class="info-block"><strong>Thema's</strong><p>Circulaire economie · Foodsector · Verpakking</p></div>
+      </div>
+      <div class="screen-bottom">
+        <button class="cta-btn green" onclick="goTo('f2s4')">Log in om contact te leggen →</button>
+      </div>
+    </div>
+
+    <div class="screen" id="f2s3_energie">
+      <div class="screen-top">
+        <div class="nav-back" onclick="goTo('f2s2')">← Terug</div>
+        <div class="profile-header"><h3>Solarfield</h3><div class="loc">Energie-opwekking voor MKB · Utrecht</div><div class="quote">"Duurzame energie toegankelijk maken voor elke ondernemer."</div></div>
+        <div class="info-block"><strong>Wat bieden we</strong><p>Zonnepaneel-oplossingen op maat voor MKB, inclusief financieringsadvies en installatie.</p></div>
+        <div class="info-block"><strong>Wat zoeken we</strong><p>MKB-bedrijven die willen verduurzamen en energiekosten willen verlagen.</p></div>
+        <div class="info-block"><strong>Thema's</strong><p>Energie · Duurzaamheid · MKB</p></div>
+      </div>
+      <div class="screen-bottom">
+        <button class="cta-btn green" onclick="goTo('f2s4')">Log in om contact te leggen →</button>
+      </div>
+    </div>
+
+    <div class="screen" id="f2s3_food">
+      <div class="screen-top">
+        <div class="nav-back" onclick="goTo('f2s2')">← Terug</div>
+        <div class="profile-header"><h3>Fairfood</h3><div class="loc">Transparantie in de voedselketen · Amsterdam</div><div class="quote">"Eerlijk voedsel begint bij eerlijke informatie."</div></div>
+        <div class="info-block"><strong>Wat bieden we</strong><p>Technologie voor transparantie in de voedselketen, van boer tot consument.</p></div>
+        <div class="info-block"><strong>Wat zoeken we</strong><p>Voedselbedrijven en retailers die transparantie willen aantonen aan hun klanten.</p></div>
+        <div class="info-block"><strong>Thema's</strong><p>Food · Transparantie · Keten</p></div>
       </div>
       <div class="screen-bottom">
         <button class="cta-btn green" onclick="goTo('f2s4')">Log in om contact te leggen →</button>
@@ -455,19 +337,10 @@ h2 em { color: #3DC23D; font-style: normal; }
     <div class="screen" id="f2s4">
       <div class="screen-top">
         <h2>Om contact te leggen heb je een <em>account</em> nodig.</h2>
-        <div class="choice-grid" style="margin-top:12px">
-          <div class="choice-item" onclick="goTo('f2s5')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-            <div><h4>Eerst meer weten</h4><p>Wat is FFF precies?</p></div>
-          </div>
-          <div class="choice-item" onclick="goTo('f2s6')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
-            <div><h4>Account aanvragen</h4><p>Word lid van het netwerk</p></div>
-          </div>
-          <div class="choice-item" onclick="goTo('f2s3')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div>
-            <div><h4>Inloggen</h4><p>Je hebt al een account</p></div>
-          </div>
+        <div class="choice-grid" style="margin-top:14px">
+          <div class="choice-item" onclick="goTo('f2s5')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><h4>Eerst meer weten</h4><p>Wat is FFF precies?</p></div></div>
+          <div class="choice-item" onclick="goTo('f2s6')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div><div><h4>Account aanvragen</h4><p>Word lid van het netwerk</p></div></div>
+          <div class="choice-item"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div><div><h4>Inloggen</h4><p>Je hebt al een account</p></div></div>
         </div>
       </div>
       <div class="screen-bottom"></div>
@@ -481,9 +354,7 @@ h2 em { color: #3DC23D; font-style: normal; }
         <div class="info-block"><strong>Impact maken</strong><p>Verhalen, events en directe verbinding met ondernemers die jou voor zijn gegaan.</p></div>
         <div class="info-block"><strong>Community</strong><p>Actief netwerk met regelmatige bijeenkomsten en online verbinding.</p></div>
       </div>
-      <div class="screen-bottom">
-        <button class="cta-btn green" onclick="goTo('f2s6')">Vraag toegang aan →</button>
-      </div>
+      <div class="screen-bottom"><button class="cta-btn green" onclick="goTo('f2s6')">Vraag toegang aan →</button></div>
     </div>
 
     <div class="screen" id="f2s6">
@@ -495,9 +366,7 @@ h2 em { color: #3DC23D; font-style: normal; }
         <div class="form-group"><label>E-mail</label><input type="email" placeholder="jan@greenstart.nl"></div>
         <div class="form-group"><label>Fase onderneming</label><input type="text" placeholder="Groeiende startup, 3 jaar actief"></div>
       </div>
-      <div class="screen-bottom">
-        <button class="cta-btn green" onclick="goTo('f2s7')">Verstuur aanvraag →</button>
-      </div>
+      <div class="screen-bottom"><button class="cta-btn green" onclick="goTo('f2s7')">Verstuur aanvraag →</button></div>
     </div>
 
     <div class="screen" id="f2s7">
@@ -515,28 +384,15 @@ h2 em { color: #3DC23D; font-style: normal; }
     </div>
 
     <!-- ══════ FLOW 3 ══════ -->
-
     <div class="screen" id="f3s1">
       <div class="screen-top">
         <h2>Waar wil je <em>beginnen</em>?</h2>
         <p class="sub">Kies zelf wat voor jou het meest relevant is.</p>
         <div class="choice-grid">
-          <div class="choice-item" onclick="goTo('f3s2a')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-            <div><h4>Wat is FFF?</h4><p>Uitleg over het netwerk</p></div>
-          </div>
-          <div class="choice-item" onclick="goTo('f3s2b')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-            <div><h4>Bedrijven bekijken</h4><p>Wie zit er in het netwerk?</p></div>
-          </div>
-          <div class="choice-item" onclick="goTo('f3s2c')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-            <div><h4>Events bekijken</h4><p>Komende bijeenkomsten</p></div>
-          </div>
-          <div class="choice-item" onclick="goTo('f3s2d')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
-            <div><h4>Toegang aanvragen</h4><p>Direct lid worden</p></div>
-          </div>
+          <div class="choice-item" onclick="goTo('f3s2a')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><h4>Wat is FFF?</h4><p>Uitleg over het netwerk</p></div></div>
+          <div class="choice-item" onclick="goTo('f3s2b')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><h4>Bedrijven bekijken</h4><p>Wie zit er in het netwerk?</p></div></div>
+          <div class="choice-item" onclick="goTo('f3s2c')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div><h4>Events bekijken</h4><p>Komende bijeenkomsten</p></div></div>
+          <div class="choice-item" onclick="goTo('f3s2d')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div><div><h4>Toegang aanvragen</h4><p>Direct lid worden</p></div></div>
         </div>
       </div>
       <div class="screen-bottom"></div>
@@ -550,18 +406,14 @@ h2 em { color: #3DC23D; font-style: normal; }
         <div class="info-block"><strong>Samenwerking</strong><p>Vind partners, mentors en gelijkgestemde ondernemers die impact willen maken.</p></div>
         <div class="info-block"><strong>Community</strong><p>Regelmatige events, verhalen en online verbinding.</p></div>
       </div>
-      <div class="screen-bottom">
-        <button class="cta-btn green" onclick="goTo('f3s2b')">Bekijk bedrijven →</button>
-      </div>
+      <div class="screen-bottom"><button class="cta-btn green" onclick="goTo('f3s2b')">Bekijk bedrijven →</button></div>
     </div>
 
     <div class="screen" id="f3s2b">
       <div class="screen-top">
         <div class="nav-back" onclick="goTo('f3s1')">← Terug</div>
         <div class="filter-row">
-          <span class="filter-pill on">Alle</span>
-          <span class="filter-pill">Energie</span>
-          <span class="filter-pill">Circulair</span>
+          <span class="filter-pill on">Alle</span><span class="filter-pill">Energie</span><span class="filter-pill">Circulair</span>
         </div>
         <div class="card-list">
           <div class="biz-card" onclick="goTo('f3s3')"><h4>GreenRoots BV</h4><p>Circulaire verpakkingen voor de foodsector</p><span class="tag">Circulair</span></div>
@@ -576,21 +428,9 @@ h2 em { color: #3DC23D; font-style: normal; }
       <div class="screen-top">
         <div class="nav-back" onclick="goTo('f3s1')">← Terug</div>
         <h2>Komende <em>events</em></h2>
-        <div class="event-card" onclick="goTo('f3s2c_detail')">
-          <div class="event-date">24 jun · 19:00</div>
-          <h4>Netwerkevent Amsterdam</h4>
-          <p>Ontmoet andere FFF-ondernemers</p>
-        </div>
-        <div class="event-card" onclick="goTo('f3s2c_detail')">
-          <div class="event-date">8 jul · 14:00</div>
-          <h4>Workshop Impactmeting</h4>
-          <p>Leer je impact te meten en communiceren</p>
-        </div>
-        <div class="event-card" onclick="goTo('f3s2c_detail')">
-          <div class="event-date">22 jul · 10:00</div>
-          <h4>Founders Breakfast</h4>
-          <p>Informele ontmoeting voor leden</p>
-        </div>
+        <div class="event-card" onclick="goTo('f3s2c_detail')"><div class="event-date">24 jun · 19:00</div><h4>Netwerkevent Amsterdam</h4><p>Ontmoet andere FFF-ondernemers</p></div>
+        <div class="event-card" onclick="goTo('f3s2c_detail')"><div class="event-date">8 jul · 14:00</div><h4>Workshop Impactmeting</h4><p>Leer je impact te meten en communiceren</p></div>
+        <div class="event-card" onclick="goTo('f3s2c_detail')"><div class="event-date">22 jul · 10:00</div><h4>Founders Breakfast</h4><p>Informele ontmoeting voor leden</p></div>
       </div>
       <div class="screen-bottom"></div>
     </div>
@@ -598,11 +438,7 @@ h2 em { color: #3DC23D; font-style: normal; }
     <div class="screen" id="f3s2c_detail">
       <div class="screen-top">
         <div class="nav-back" onclick="goTo('f3s2c')">← Terug</div>
-        <div class="event-detail">
-          <div class="edate">24 juni · 19:00 · Amsterdam</div>
-          <h3>Netwerkevent Amsterdam</h3>
-          <p>Ontmoet andere duurzame ondernemers uit het FFF-netwerk. Wissel ervaringen uit en leg nieuwe contacten in een informele setting.</p>
-        </div>
+        <div class="event-detail"><div class="edate">24 juni · 19:00 · Amsterdam</div><h3>Netwerkevent Amsterdam</h3><p>Ontmoet andere duurzame ondernemers uit het FFF-netwerk. Wissel ervaringen uit en leg nieuwe contacten in een informele setting.</p></div>
         <div class="info-block"><strong>Wat kun je verwachten?</strong><p>Pitches van leden, een korte kennismaking met het netwerk en ruimte voor gesprekken.</p></div>
         <div class="info-block"><strong>Locatie</strong><p>Pakhuis de Zwijger, Amsterdam</p></div>
       </div>
@@ -620,25 +456,17 @@ h2 em { color: #3DC23D; font-style: normal; }
         <div class="form-group"><label>Bedrijf</label><input type="text" placeholder="GreenStart BV"></div>
         <div class="form-group"><label>E-mail</label><input type="email" placeholder="jan@greenstart.nl"></div>
       </div>
-      <div class="screen-bottom">
-        <button class="cta-btn green" onclick="goTo('f3s5')">Verstuur aanvraag →</button>
-      </div>
+      <div class="screen-bottom"><button class="cta-btn green" onclick="goTo('f3s5')">Verstuur aanvraag →</button></div>
     </div>
 
     <div class="screen" id="f3s3">
       <div class="screen-top">
         <div class="nav-back" onclick="goTo('f3s2b')">← Terug</div>
-        <div class="profile-header">
-          <h3>GreenRoots BV</h3>
-          <div class="loc">Circulaire verpakkingen · Amsterdam</div>
-          <div class="quote">"We geloven dat elke verpakking een tweede leven verdient."</div>
-        </div>
+        <div class="profile-header"><h3>GreenRoots BV</h3><div class="loc">Circulaire verpakkingen · Amsterdam</div><div class="quote">"We geloven dat elke verpakking een tweede leven verdient."</div></div>
         <div class="info-block"><strong>Thema's</strong><p>Circulaire economie · Foodsector · Verpakking</p></div>
         <div class="info-block"><strong>Omschrijving</strong><p>GreenRoots ontwikkelt innovatieve circulaire verpakkingen voor de foodsector.</p></div>
       </div>
-      <div class="screen-bottom">
-        <button class="cta-btn green" onclick="goTo('f3s4')">Log in om contact te leggen →</button>
-      </div>
+      <div class="screen-bottom"><button class="cta-btn green" onclick="goTo('f3s4')">Log in om contact te leggen →</button></div>
     </div>
 
     <div class="screen" id="f3s4">
@@ -646,14 +474,8 @@ h2 em { color: #3DC23D; font-style: normal; }
         <h2>Maak een <em>account</em> aan</h2>
         <p class="sub">Om contact te leggen of je aan te melden heb je een account nodig.</p>
         <div class="choice-grid">
-          <div class="choice-item" onclick="goTo('f3s5')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
-            <div><h4>Account aanvragen</h4><p>Word lid van FFF</p></div>
-          </div>
-          <div class="choice-item" onclick="goTo('f3s5')">
-            <div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div>
-            <div><h4>Inloggen</h4><p>Je hebt al een account</p></div>
-          </div>
+          <div class="choice-item" onclick="goTo('f3s5')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div><div><h4>Account aanvragen</h4><p>Word lid van FFF</p></div></div>
+          <div class="choice-item" onclick="goTo('f3s5')"><div class="choice-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg></div><div><h4>Inloggen</h4><p>Je hebt al een account</p></div></div>
         </div>
       </div>
       <div class="screen-bottom"></div>
@@ -682,10 +504,20 @@ function goTo(id) {
   const t = document.getElementById(id);
   if (t) t.classList.add('active');
 }
+
 function switchFlow(n) {
   document.querySelectorAll('.flow-btn').forEach((b,i) => b.classList.toggle('active', i+1===n));
   const starts = { 1:'f1s1', 2:'f2s1', 3:'f3s1' };
   goTo(starts[n]);
+}
+
+function setFilter(cat) {
+  document.querySelectorAll('#f2-filters .filter-pill').forEach(p => {
+    p.classList.toggle('on', p.textContent.toLowerCase() === cat || (cat === 'alle' && p.textContent === 'Alle'));
+  });
+  document.querySelectorAll('#f2-cards .biz-card').forEach(c => {
+    c.classList.toggle('hidden', cat !== 'alle' && c.dataset.cat !== cat);
+  });
 }
 </script>
 </body>
